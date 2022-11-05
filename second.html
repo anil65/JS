@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script type="text/javascript">
+        function testingClass()
+        {
+            const ele = document.getElementsByClassName('t1');
+            document.write(ele.length);
+            for(let p = 0; p < ele.length;p++)
+            {
+                ele[p].style.background="red";
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Name" class="t1" />
+    <input type="text" placeholder="RollNumber" class="t1" />
+    <button onclick="testingClass()">Click me</button>
+</body>
+</html>

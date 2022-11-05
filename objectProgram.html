@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        function fun()
+        {
+            let name = document.myform.name.value;
+            let password = document.myform.password.value;
+            if(name == null || name == "")
+            {
+                document.getElementById('demo').innerHTML = "Name field can not be empty ";
+                return false;
+            } 
+            if(password.length < 6)
+            {
+                document.getElementById('demo').innerHTML = "Password should be strong ";
+                return false;
+            }
+
+        }
+    </script>
+   
+</head>
+<body>
+    <form name="myform" method="POST" onsubmit="return fun()">
+        <input type="text"  name="name" placeholder="Enter Name " />
+        <input type="password" name="password" placeholder="Enter Password" />
+        <input type="submit" >
+        <p id="demo"></p>
+    </form>
+    
+</body>
+</html>
